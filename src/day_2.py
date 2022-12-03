@@ -1,4 +1,4 @@
-# day2.py
+# day_2.py
 
 # A = Rock, B = Paper, C = Scissors
 # X = Rock, Y = Paper, Z = Scissors
@@ -98,5 +98,5 @@ def main(input):
 
 
 if __name__ == '__main__':
-    input = 'input/day2_full.txt'
+    input = 'input/day_2_full.txt'
     main(input)

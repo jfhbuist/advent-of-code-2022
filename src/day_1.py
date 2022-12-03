@@ -1,6 +1,6 @@
-# day1.py
+# day_1.py
 
-input = 'input/day1_full.txt'
+input = 'input/day_1_full.txt'
 
 current_cal = 0
 elf_idx = 0
