@@ -49,8 +49,7 @@ game_guide_inverse = {
 }
 
 # Rock = 1 points, Paper = 2 points, Scissors = 3 points
-# Loss = 0 points, Draw = 3 points, Win = 6 points
-
+# loss = 0 points, draw = 3 points, win = 6 points
 score_guide = {
     'R': 1,
     'P': 2,
@@ -67,16 +66,16 @@ def get_score(play):
     return points
 
 
-def get_play(line_stripped):
-    opponent = line_stripped[0]
-    me = line_stripped[2]
+def get_play(line):
+    opponent = line[0]
+    me = line[2]
     play = translate[opponent] + ' ' + translate[me]
     return play
 
 
-def get_play_inverse(line_stripped):
-    opponent = line_stripped[0]
-    outcome = line_stripped[2]
+def get_play_inverse(line):
+    opponent = line[0]
+    outcome = line[2]
     play_inverse = translate_inverse[opponent] + ' ' + translate_inverse[outcome]
     play = translate[opponent] + ' ' + game_guide_inverse[play_inverse]
     return play
@@ -88,10 +87,10 @@ def main(input):
 
     with open(input) as f:
         for line in f:
-            line_stripped = line.strip()
-            if line_stripped:  # check if not empty
-                # play = get_play(line_stripped)
-                play = get_play_inverse(line_stripped)
+            line = line.strip()
+            if line:  # check if not empty
+                # play = get_play(line)  # for part 1
+                play = get_play_inverse(line)  # for part 2
                 total_points += get_score(play)
 
     print(total_points)
