@@ -43,7 +43,8 @@ if not req.ok:
 # Create and write input file
 with open(local_input_path, 'w', newline='\n') as f:
     # remove trailing empty line and write to file
-    f.write(req.text.rstrip('\n'))
+    # f.write(req.text.rstrip('\n'))
+    f.write(req.text)
 
 # Create python solution script
 with open(script_path, 'w', newline='\n') as f:

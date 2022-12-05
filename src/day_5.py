@@ -5,7 +5,7 @@ import copy
 
 def parse_input(input):
     with open(input) as f:
-        f_comps = f.read().split('\n\n')
+        f_comps = f.read().rstrip('\n').split('\n\n')
         stack_labels = f_comps[0].split('\n').pop().split()
         stack_labels = [int(x)-1 for x in stack_labels]  # convert to integers and shift by 1
         stack_chart = f_comps[0].split('\n')[:-1]
