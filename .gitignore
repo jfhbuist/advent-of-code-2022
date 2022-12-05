@@ -1,4 +1,6 @@
-### General
+# Specific
+
+scrap/
 
 # Exclude large files
 *.mp4
