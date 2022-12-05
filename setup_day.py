@@ -41,12 +41,12 @@ if not req.ok:
 # Now all checks have succeeded, so continue
 
 # Create and write input file
-with open(local_input_path, 'w') as f:
+with open(local_input_path, 'w', newline='\n') as f:
     # remove trailing empty line and write to file
     f.write(req.text.rstrip('\n'))
 
 # Create python solution script
-with open(script_path, 'w') as f:
+with open(script_path, 'w', newline='\n') as f:
     f.write("# day_{0:d}.py\n\n\n".format(day))
     f.write("def parse_input(input):\n")
     f.write("    with open(input) as f:\n\n\n\n")
@@ -54,4 +54,4 @@ with open(script_path, 'w') as f:
     f.write("if __name__ == '__main__':\n")
     f.write("    input = 'input/day_{0:d}_full.txt'\n".format(day))
     f.write("    part = 1\n")
-    f.write("    print(main(input, part))")
+    f.write("    print(main(input, part))\n")
