@@ -48,11 +48,17 @@ with open(local_input_path, 'w', newline='\n') as f:
 
 # Create python solution script
 with open(script_path, 'w', newline='\n') as f:
-    f.write("# day_{0:d}.py\n\n\n".format(day))
+    f.write("# day_{0:d}.py\n\n".format(day))
     f.write("def parse_input(input):\n")
     f.write("    with open(input) as f:\n\n\n\n")
     f.write("def main(input, part):\n\n\n\n")
+    f.write("    if part == 0:\n")
+    f.write("        # return\n")
+    f.write("    elif part == 1:\n")
+    f.write("        # return\n")
+    f.write("    elif part == 2:\n")
+    f.write("        # return\n\n\n")
     f.write("if __name__ == '__main__':\n")
-    f.write("    input = 'input/day_{0:d}_full.txt'\n".format(day))
+    f.write("    input = 'input/day_{0:d}_test.txt'\n".format(day))
     f.write("    part = 1\n")
     f.write("    print(main(input, part))\n")

@@ -50,3 +50,11 @@ def test_day_5():
     test_answer_part_2 = 'MCD'
     test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
     assert (test_part_1 and test_part_2)
+
+
+def test_day_6():
+    day = 6
+    test_answer_part_1 = 7
+    test_answer_part_2 = 19
+    test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
+    assert (test_part_1 and test_part_2)
