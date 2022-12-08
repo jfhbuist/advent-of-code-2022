@@ -50,8 +50,10 @@ with open(local_input_path, 'w', newline='\n') as f:
 with open(script_path, 'w', newline='\n') as f:
     f.write("# day_{0:d}.py\n\n".format(day))
     f.write("def parse_input(input):\n")
-    f.write("    with open(input) as f:\n\n\n\n")
-    f.write("def main(input, part):\n\n\n\n")
+    f.write("    with open(input) as f:\n\n\n")
+    f.write("    return 0\n\n\n\n")
+    f.write("def main(input, part):\n\n")
+    f.write("    output = parse_input(input)\n\n\n\n")
     f.write("    if part == 0:\n")
     f.write("        return 0\n")
     f.write("    elif part == 1:\n")

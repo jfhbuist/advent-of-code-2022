@@ -65,3 +65,10 @@ def test_day_7():
     test_answer_part_2 = 24933642
     test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
     assert (test_part_1 and test_part_2)
+    
+def test_day_8():
+    day = 8
+    test_answer_part_1 = 21
+    test_answer_part_2 = 8
+    test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
+    assert (test_part_1 and test_part_2)
