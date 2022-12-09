@@ -37,7 +37,13 @@ class Directory():
             size += c.get_size()
         return size
         
+    def get_child_list(self):   
+        child_list = [self]
+        for c in self.children:
+            child_list += c.get_child_list()
+        return(child_list)
        
+
 class File():
     def __init__(self, name, parent, size):
         self.name = name
@@ -58,6 +64,10 @@ class File():
     
     def get_size(self):
         return self.size
+    
+    def get_child_list(self):   
+        child_list = [self]
+        return(child_list)
        
 
 def parse_input(input):
@@ -65,10 +75,6 @@ def parse_input(input):
         # split file into blocks related to each command (cd or ls),
         # and filter to remove empty strings:
         blocks = list(filter(None, f.read().split('$ ')))
-    # collect all directories in a list:
-    directory_list = []  
-    # collect all files in a list:
-    file_list = []  
     # initialize directory structure, assume first line is '$ cd /':
     root = Directory('/', None)
     current_dir = root
@@ -88,22 +94,20 @@ def parse_input(input):
                 name = elements[1]
                 if elements[0] == 'dir':                  
                     dir = Directory(name, current_dir)
-                    current_dir.add_child(dir)     
-                    directory_list.append(dir)         
+                    current_dir.add_child(dir)            
                 else:
                     file = File(name, current_dir, elements[0])   
-                    current_dir.add_child(file)  
-                    file_list.append(file)
-    return root, directory_list, file_list
+                    current_dir.add_child(file)
+    return root
 
 
 def main(input, part):
     
-    root, directory_list, file_list = parse_input(input)
+    root = parse_input(input)
 
     print(root)
-    # print(directory_list)
-    # print(file_list)
+    child_list = root.get_child_list()
+    directory_list = [c for c in child_list if type(c) == Directory]
     
     small_directories = []   
     for dir in directory_list:

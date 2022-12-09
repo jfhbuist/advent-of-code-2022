@@ -123,7 +123,6 @@ def main(input, part):
 
 
 if __name__ == '__main__':
-    # input = 'input/day_9_test.txt'
     input = 'input/day_9_full.txt'
-    part = 2
+    part = 0
     print(main(input, part))
