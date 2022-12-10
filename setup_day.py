@@ -12,7 +12,7 @@ except ValueError:
 
 script_path = 'src/day_{0:d}.py'.format(day)
 online_input_path = 'https://adventofcode.com/2022/day/{0:d}/input'.format(day)
-local_input_path = 'input/day_{0:d}_full.txt'.format(day)
+local_input_path = 'input_full/day_{0:d}.txt'.format(day)
 
 # Exit with error if preqrequisites are not met
 if os.path.exists(script_path):
@@ -61,6 +61,6 @@ with open(script_path, 'w', newline='\n') as f:
     f.write("    elif part == 2:\n")
     f.write("        return 0\n\n\n")
     f.write("if __name__ == '__main__':\n")
-    f.write("    input = 'input/day_{0:d}_test.txt'\n".format(day))
+    f.write("    input = 'input_test/day_{0:d}.txt'\n".format(day))
     f.write("    part = 1\n")
     f.write("    print(main(input, part))\n")
