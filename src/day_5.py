@@ -62,6 +62,6 @@ def main(input, part):
 
 
 if __name__ == '__main__':
-    input = 'input/day_5_full.txt'
+    input = 'input_test/day_5.txt'
     part = 0
     print(main(input, part))

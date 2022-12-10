@@ -5,7 +5,7 @@ import importlib
 
 def get_test_results(day, test_answer_part_1, test_answer_part_2):
     module = importlib.import_module('day_{0:d}'.format(day))
-    test_input = 'input/day_{0:d}_test.txt'.format(day)
+    test_input = 'input_test/day_{0:d}.txt'.format(day)
     result_part_1, result_part_2 = module.main(test_input, 0)
     test_part_1 = (result_part_1 == test_answer_part_1)
     test_part_2 = (result_part_2 == test_answer_part_2)
@@ -77,8 +77,8 @@ def test_day_9():
     test_answer_part_1 = 13
     test_answer_part_2 = 36
     import day_9
-    result_part_1 = day_9.main('input/day_9_test_1.txt', 1)
-    result_part_2 = day_9.main('input/day_9_test_2.txt', 2)
+    result_part_1 = day_9.main('input_test/day_9_1.txt', 1)
+    result_part_2 = day_9.main('input_test/day_9_2.txt', 2)
     test_part_1 = (result_part_1 == test_answer_part_1)
     test_part_2 = (result_part_2 == test_answer_part_2)
     assert (test_part_1 and test_part_2)
