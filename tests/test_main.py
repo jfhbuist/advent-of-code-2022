@@ -59,6 +59,7 @@ def test_day_6():
     test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
     assert (test_part_1 and test_part_2)
     
+
 def test_day_7():
     day = 7
     test_answer_part_1 = 95437
@@ -66,6 +67,7 @@ def test_day_7():
     test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
     assert (test_part_1 and test_part_2)
     
+
 def test_day_8():
     day = 8
     test_answer_part_1 = 21
@@ -73,6 +75,7 @@ def test_day_8():
     test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
     assert (test_part_1 and test_part_2)
     
+
 def test_day_9():
     test_answer_part_1 = 13
     test_answer_part_2 = 36
@@ -83,9 +86,18 @@ def test_day_9():
     test_part_2 = (result_part_2 == test_answer_part_2)
     assert (test_part_1 and test_part_2)
 
+
 def test_day_10():
     day = 10
     test_answer_part_1 = 13140
     test_answer_part_2 = '##..##..##..##..##..##..##..##..##..##..\n###...###...###...###...###...###...###.\n####....####....####....####....####....\n#####.....#####.....#####.....#####.....\n######......######......######......####\n#######.......#######.......#######.....'
+    test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
+    assert (test_part_1 and test_part_2)
+
+
+def test_day_11():
+    day = 11
+    test_answer_part_1 = 10605
+    test_answer_part_2 = 2713310158
     test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
     assert (test_part_1 and test_part_2)
