@@ -39,6 +39,7 @@ class Monkey():
         if part == 1:
             new = math.floor(new / 3)
             print('    Monkey gets bored with item. Worry level is divided by 3 to {n:d}.'.format(n=new)) 
+        # divide by product of all monkey's tests to reduce number without changing flow:
         new = new % divisor
         return new
     
