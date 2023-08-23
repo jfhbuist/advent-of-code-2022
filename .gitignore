@@ -1,7 +1,7 @@
 ### Specific
 
 scrap/
-.session_cookie
+.session_cookie*
 input_full/*
 
 ### General

@@ -101,3 +101,11 @@ def test_day_11():
     test_answer_part_2 = 2713310158
     test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
     assert (test_part_1 and test_part_2)
+
+
+def test_day_12():
+    day = 12
+    test_answer_part_1 = 31
+    test_answer_part_2 = 29
+    test_part_1, test_part_2 = get_test_results(day, test_answer_part_1, test_answer_part_2)
+    assert (test_part_1 and test_part_2)
